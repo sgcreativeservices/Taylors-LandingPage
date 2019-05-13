@@ -1,0 +1,72 @@
+@import "variables_core"; // import core (global) variables
+@import "variables_brand"; // import brand specific variables
+@import "mixins";
+
+@font-face{
+	font-family: 'font_regular';
+	src: url('../fonts/custom_font/#{$font_reg_path}.eot');
+	src: url('../fonts/custom_font/#{$font_reg_path}.eot#iefix') format('embedded-opentype'),
+		 url('../fonts/custom_font/#{$font_reg_path}.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'font_bold';
+	src: url('../fonts/custom_font/#{$font_bold_path}.eot');
+	src: url('../fonts/custom_font/#{$font_bold_path}.eot#iefix') format('embedded-opentype'),
+    	 url('../fonts/custom_font/#{$font_bold_path}.woff') format('woff');
+}
+
+body{
+	color: $main_colour;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+strong, b{
+	//font-family: 'font_bold';
+}
+
+#pageBody{}
+
+header{
+	padding: $header_padding;
+	background: $header_background_colour;
+	.col-md-6{
+		&.affix{
+			@include animate (slideInDown);
+			background: $sticky_header_background_colour;
+			box-shadow: $sticky_header_shadow;
+		}
+	}
+}
+
+.section{
+	padding: $section_padding;
+	&.one{
+		background: $section_one_background_colour;
+	}
+	&.two{
+		background: $section_two_background_colour;
+		.widget, .testimonial{
+			background: #fff;
+		}
+	}
+	&.three{
+		background: $section_three_background_colour;
+	}
+	&.one, &.three{
+		.accordion .panel-group .panel .panel-body,
+		.tab_wrapper .tab-content .tab-pane{
+			background: #eee;
+		}
+	}
+}
+
+footer{
+	padding: $footer_padding;
+	background: $footer_background_colour;
+}
+
+@import "family"; 					// _family.scss
+@import "animate"; 					// _animate.scss
+@import "brand_components"; 		// Branded Components
+@import "mediaqueries"; 			// Media queries

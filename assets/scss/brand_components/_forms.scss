@@ -1,0 +1,80 @@
+/* ENQUIRY FORM COMPONENT */
+.form-horizontal{
+	@include content_text_styles;
+	.form-group{
+		.controls{ //col-md-7
+			.date-picker{ // datepicker form field
+				.input-group-addon{
+					color: $main_colour;
+				}
+			}
+		}
+	}
+}
+#submitEnquiryButton{
+    @include form_cta;
+}
+
+// Datepick - dropdown
+.datepicker{
+    .datepicker-days,
+    .datepicker-months,
+    .datepicker-years{
+        .table-condensed{ //table
+            thead{
+                tr{
+                    th{
+                        &.prev, &.next, &.dow{
+                            color: $form_colour;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        &.day{
+                            &.active{
+                                background: $form_colour;
+                                &:hover{
+                                    background: $form_colour;
+                                }
+                            }
+                            &.old{
+                                color: lighten($main_colour,50%);
+                            }
+                            &:hover{
+                                background: $form_colour_s;
+                            }
+                        }
+                        span.month,
+                        span.year{
+                            &.active{
+                                background: $form_colour;
+                                &:hover{
+                                    background: $form_colour;
+                                }
+                            }
+                            &:hover{
+                                background: $form_colour_s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

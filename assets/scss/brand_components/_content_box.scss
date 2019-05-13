@@ -1,0 +1,24 @@
+/* CONTENT BOX COMPONENT */
+.content_box{
+	@include content_text_styles;
+	.section &{
+		@include component_margin;
+	}
+	.button{
+		a{
+			@include primary_cta;
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

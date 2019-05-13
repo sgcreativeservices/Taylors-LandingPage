@@ -1,0 +1,1 @@
+@import "application.js"; // Custom scripts for project

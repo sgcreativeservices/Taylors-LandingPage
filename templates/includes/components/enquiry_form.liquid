@@ -1,0 +1,193 @@
+<div class="form-horizontal" id="form" style="">
+    <h3>Enquire now</h3>
+    <p>Use this form to contact us with any questions you may have. Our Student Enrolment Advisers speak a variety of languages, and understand several more. We will do our best to contact you in your preferred language.</p>
+    <div class="form-group has-error">
+        <div class="col-md-5 control-label">
+            <label for="firstName">First Name <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <input class="form-control required invalid" data-bind="field: Model.FirstName" data-sg-unique-elem-seq="1" id="firstName" maxlength="50" type="text">
+            <span class="help-block validation-msg">This is a required field</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="lastName">Last Name <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <input class="form-control required" data-bind="field: Model.LastName" data-sg-unique-elem-seq="2" id="lastName" maxlength="50" type="text">
+        </div>
+    </div>
+    <div class="form-group has-error">
+        <div class="col-md-5 control-label">
+            <label for="dateOfBirth">Date of Birth<sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <div class="input-group date date-picker">
+                <input id="dateOfBirth" name="date_of_birth" data-bind="field: Model.DateOfBirth" class="form-control datepicker required invalid" placeholder="MM/DD/YYYY" data-sg-unique-elem-seq="4" type="text">
+                <label for="dateOfBirth" class="input-group-addon btn">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <sup class="required">&nbsp;*</sup>
+                </label>
+                <span class="help-block validation-msg">This is a required field</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="CountryOfResidence">Country of residence <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <select class="form-control required" data-bind="field: Model.Country, options: $root.ViewBag.Countries, optionsText: 'Name', optionsValue: 'Id', optionsCaption: sg.strings.pleaseSelectCaption" data-sg-unique-elem-seq="9" id="CountryOfResidence">
+                <option value="">
+                    -- Please Select --
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="primaryPhoneType">Primary telephone type <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <select class="form-control required" data-bind="field: Model.PrimaryPhoneType" data-sg-unique-elem-seq="5" id="primaryPhoneType" name="primaryPhoneType">
+                <option value="">
+                    -- Please select --
+                </option>
+                <option value="Mobile">
+                    Mobile
+                </option>
+                <option value="Landline">
+                    Landline
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group" data-bind="visible: Model.PrimaryPhoneType() == 'Landline'" style="">
+        <div class="col-md-5">
+            <label class="control-label" for="telephoneNumber"></label>
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-sm-2">
+                    <input class="form-control" data-bind="field: Model.TelephoneCountryCode" disabled="disabled" id="field-element-58" maxlength="6" type="text" placeholder="+93">
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control" data-bind="field: Model.AreaCode, disable: Model.PrimaryPhoneType() == 'Mobile'" id="primaryPhoneAreaCode" name="primaryPhoneAreaCode" maxlength="10" placeholder="(area)" title="(area)" type="tel">
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control required" data-bind="field: Model.TelephoneNumber" id="studentLandline" name="studentLandline" maxlength="30" placeholder="(number)" title="(number)" data-sg-unique-elem-seq="1" type="tel">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" data-bind="visible: Model.PrimaryPhoneType() == 'Mobile'" style="display:none;">
+        <div class="col-md-5">
+            <label class="control-label" for="studentMobile"></label>
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col-sm-2">
+                    <input class="form-control" data-bind="field: Model.TelephoneCountryCode" disabled="disabled" id="field-element-59" maxlength="6" type="text" placeholder="+93">
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control required" data-bind="field: Model.TelephoneNumber" id="studentMobile" name="studentMobile" maxlength="30" placeholder="(number)" title="(number)" data-sg-unique-elem-seq="2" type="tel">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="email">Email <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <input class="form-control required" data-bind="field: Model.Email" data-sg-unique-elem-seq="3" id="email" maxlength="100" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="financialSupport">Source of funds <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <select class="form-control required" data-bind="field: Model.ResponsibleForFinancialSupport, options: ViewBag.ResponsibleForFinancialSupport, optionsText: 'name', optionsValue: 'value', optionsCaption: sg.strings.pleaseSelectCaption" id="financialSupport" name="financialSupport">
+                <option value="">
+                    -- Please Select --
+                </option>
+                <option value="Self or family funded">
+                    I am self-funding or family-funded
+                </option>
+                <option value="Has scholarship or sponsorship">
+                    I have a scholarship / sponsorship
+                </option>
+                <option value="Has sponsorship from government or organisation">
+                    I have a sponsorship from a government or organisation
+                </option>
+                <option value="Expects to get scholarship from elsewhere">
+                    I expect to get a scholarship from elsewhere
+                </option>
+                <option value="Not funded and seeking full scholarship">
+                    I have no funding and am seeking a full scholarship
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="preferredIntake">Preferred start date <sup class="required">&nbsp;*</sup></label>
+        </div>
+        <div class="col-md-7 controls">
+            <select class="form-control required" data-bind="field: Model.PreferredIntake, options: ViewBag.PreferredIntakes, optionsText: 'name', optionsValue: 'value', optionsCaption: sg.strings.pleaseSelectCaption" id="preferredIntake" name="preferredIntake">
+                <option value="">
+                    -- Please Select --
+                </option>
+                <option value="Sep 2017">
+                    September 2017
+                </option>
+                <option value="Jan 2018">
+                    January 2018
+                </option>
+                <option value="Unsure">
+                    Unsure
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="question">Question</label>
+        </div>
+        <div class="col-md-7 controls">
+            <textarea class="form-control" cols="10" data-bind="field: Model.Question, valueUpdate: 'afterkeydown'" id="question" maxlength="800" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label">
+            <label for="privacyPolicyYes">
+                Subscribe
+                <sup class="required">&nbsp;*</sup>
+            </label>
+        </div>
+
+        <div class="col-md-7 controls">
+            <label>
+                <span>Select yes or no to receive further marketing communications from us. You can unsubscribe at any time and your e-mail remains confidential.</span>
+            </label>
+            <div>
+                <label class="radio-inline">
+                    <input id="privacyPolicyYes" data-bind="field: Model.NewsletterSubscribe" name="privacyPolicy" value="true" class="form-control required" data-sg-unique-elem-seq="4" type="radio">
+                    Yes
+                </label>
+                <label class="radio-inline">
+                    <input id="privacyPolicyNo" data-bind="field: Model.NewsletterSubscribe" name="privacyPolicy" value="false" class="form-control required" data-sg-unique-elem-seq="5" type="radio">
+                    No
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5 control-label"></div>
+        <div class="col-md-7 controls">
+            <input id="submitEnquiryButton" type="button" value="Submit">
+        </div>
+    </div>
+</div>

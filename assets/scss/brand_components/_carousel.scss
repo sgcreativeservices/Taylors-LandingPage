@@ -1,0 +1,49 @@
+/* CAROUSEL COMPONENT */
+.carousel{
+	@include component_margin;
+	.carousel-indicators{
+		li{
+			margin: $carousel_indicators_border_width;
+			background: $carousel_indicators_colour;
+			border-width: $carousel_indicators_border_width;
+			border-color: $carousel_indicators_border_colour;
+			&.active{
+				margin: $carousel_indicators_border_width;
+				background: $carousel_indicators_colour_active;
+				border-color: $carousel_indicators_border_colour_active;
+			}
+		}
+	}
+	.carousel-inner{
+		.item{
+			&.active{}
+			.carousel-caption{
+				background: $carousel_caption_background_colour;
+				font-size: $carousel_text_size;
+				color: $carousel_text_colour;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.carousel{
+		@include component_margin;
+		.carousel-inner{
+			.item{
+				.carousel-caption{
+					background: $carousel_caption_background_colour_mobile;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

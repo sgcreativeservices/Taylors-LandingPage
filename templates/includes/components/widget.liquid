@@ -1,0 +1,46 @@
+<!-- WIDGET COMPONENT START -->
+{% if clickable_widget == 'yes' %}
+    <div class="widget {{ className }} clickable">
+        <a href="#">
+            {% if title == blank %}
+                {{ title }}
+            {% else %}
+                <h3>{{ title }}</h3>
+            {% endif %}
+            {% if image_size == blank %}
+                {{ image_size }}
+            {% else %}
+                <img src="http://placehold.it/{{ image_size }}">
+            {% endif %}
+            {% if content %}
+                {{ content }}
+            {% endif %}
+        </a>
+    </div>
+{% else %}
+    <div class="widget {{ className }}">
+        {% if title == blank %}
+            {{ title }}
+        {% elsif clickable_title == 'yes' %}
+            <h3><a href="#">{{ title }}</a></h3>
+        {% else %}
+            <h3>{{ title }}</h3>
+        {% endif %}
+        {% if image_size == blank %}
+            {{ image_size }}
+        {% else %}
+            <img src="http://placehold.it/{{ image_size }}">
+        {% endif %}
+        {% if content %}
+            {{ content }}
+        {% endif %}
+        {% if button == blank %}
+            {{ button }}
+        {% else %}
+            <div class="button">
+                <a href="#">{{ button }}</a>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}
+<!-- WIDGET COMPONENT END -->

@@ -1,0 +1,217 @@
+// APP MIXINS
+// --------------------------------------------------
+
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+            -ms-border-radius: $radius;
+                border-radius: $radius;
+}
+
+@mixin app-transition($property, $duration, $function){
+    -webkit-transition: $property $duration $function;
+        -moz-transition: $property $duration $function;
+            -ms-transition: $property $duration $function;
+                -o-transition: $property $duration $function;
+                    transition: $property $duration $function;
+}
+
+// ANIMATE.CSS 
+$animate-scss-speed: 1s !default;
+@mixin animate($animation: none, $speed: $animate-scss-speed){
+  @if $animation != none {
+    -webkit-animation-name: $animation;
+       -moz-animation-name: $animation;
+         -o-animation-name: $animation;
+            animation-name: $animation;
+  }
+  -webkit-animation-duration: $speed;
+     -moz-animation-duration: $speed;
+       -o-animation-duration: $speed;
+            animation-duration: $speed;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+@mixin cta_shared_styles{
+    border-style: solid;
+    display: inline-block;
+    text-align: center;
+    padding: $cta_padding;
+    @include app-transition(all, .4s, ease);
+}
+
+// Primary CTA
+@mixin primary_cta{
+    @include cta_shared_styles;
+    background: $cta_primary_background_colour;
+    color: $cta_primary_text_colour;
+    border-width: $cta_primary_border_width;
+    border-color: $cta_primary_border_colour;
+    border-radius: $cta_primary_border_radius;
+    &:hover{
+        text-decoration: none;
+        background: $cta_primary_background_colour_hover;
+        color: $cta_primary_text_colour_hover;
+        border-color: $cta_primary_border_colour_hover;
+    }
+    &:active, &:focus{
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+// Secondary CTA
+@mixin secondary_cta{
+    @include cta_shared_styles;
+    background: $cta_secondary_background_colour;
+    color: $cta_secondary_text_colour;
+    border-width: $cta_secondary_border_width;
+    border-color: $cta_secondary_border_colour;
+    border-radius: $cta_secondary_border_radius;
+    &:hover{
+        text-decoration: none;
+        background: $cta_secondary_background_colour_hover;
+        color: $cta_secondary_text_colour_hover;
+        border-color: $cta_secondary_border_colour_hover;
+    }
+    &:active, &:focus{
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+// Form CTA
+@mixin form_cta{
+    @include primary_cta;
+    &:after{
+        font-family: 'Glyphicons Halflings';
+        font-size: 12px;
+        content:"\e080";
+        margin: 0 0 0 7px;
+    }
+}
+
+// COMPONENT MARGIN
+@mixin component_margin{
+    margin: $component_margin; 
+}
+
+// to wrap large tables so they don't break the page on mobile
+@mixin table_wrap{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+// CONTENT BOX, TABS, ACCORDION & BLOG ARTICLE TEXT STYLES
+@mixin content_text_styles{
+    h1, h2, h3, h4, h5, h6, p, ul, ol{
+        margin: 0 0 (nth($component_margin, 3) / 2.5) 0;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        text-transform: uppercase;
+    }
+
+    h1, h2{
+        font-weight: 600;
+    }
+
+    ul, ol{
+        padding: 0 0 0 34px;
+    }
+
+    h1{
+        font-size: $h1_size;
+        line-height: $h1_line_height;
+        color: $h1_colour;
+    }
+
+    h2{
+        font-size: $h2_size;
+        line-height: $h2_line_height;
+        color: $h2_colour;
+    }
+
+    h3{
+        font-size: $h3_size;
+        line-height: $h3_line_height;
+        color: $h3_colour;
+    }
+
+    h4{
+        font-size: $h4_size;
+        line-height: $h4_line_height;
+        color: $h4_colour;
+    }
+
+    h5{
+        font-size: $h5_size;
+        line-height: $h5_line_height;
+        color: $h5_colour;
+    }
+
+    h6{
+        font-size: $h6_size;
+        line-height: $h6_line_height;
+        color: $h6_colour;
+    } 
+
+    @media (max-width: $screen-sm-max){
+        h1{
+            font-size: $h1_size / 1.5;
+            line-height: $h1_line_height / 1.5;
+        }
+    }
+
+    p, ul, ol{
+        font-size: $p_ul_ol_size;
+        line-height: $p_ul_ol_line_height;
+        color: $p_ul_ol_colour;
+    }
+
+    a{
+        color: $a_colour;
+        text-decoration: $a_text_decoration;
+        &:hover, &:active, &:focus{
+            color: $a_colour_hover;
+            text-decoration: $a_text_decoration_hover;
+        }
+    }
+
+    strong, b{}
+
+    small{}
+
+    table{
+        tr{
+            border-bottom: 1px solid $form_colour_s;
+            &:nth-child(odd){
+                background: $form_colour_s;
+            }
+            &:nth-child(even){}
+            th{
+                color: #fff;
+                background: $form_colour;
+            }
+            td{}
+        }
+        &.unstyled{ // Class for unstyled tables
+            tr{
+                border-bottom: 0;
+                &:nth-child(odd){}
+                &:nth-child(even){}
+                th{
+                    color: $main_colour;
+                    background: none;
+                }
+                td{}
+            }
+        }
+    }
+    .table_overflow{
+        @include table_wrap;
+    }
+}

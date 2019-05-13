@@ -1,0 +1,32 @@
+/* COOKIE BAR COMPONENT */
+.cookie-bar{
+	@include animate (slideInUp);
+	box-shadow: $sticky_header_shadow;
+	.cookie-inner{ // row
+		.col-a{ // col-md-10
+			a.cookie{
+				color: $a_colour;
+				&:hover, &:active, &:focus{
+					color: $a_colour_hover;
+				}
+			}
+		}
+		.col-b{ //col-md-2
+			a.cookie-btn{
+				@include secondary_cta;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

@@ -1,0 +1,105 @@
+/* GALLERY COMPONENT */
+.gallery{
+	@include component_margin;
+	padding: $gallery_space_left_and_right;
+	h1, h2, h3, h4, h5, h6{
+		font-size: $component_title_size;
+		font-weight: bold;
+	}
+	.row{
+		.col-md-6, .col-sm-6, .col-xs-6{
+			padding: $gallery_space_between_images;
+			a{
+				&:after{
+					color: $gallery_icon_colour;
+  					@include app-transition(all, .4s, ease);
+					background: $gallery_image_overlay;
+				}
+				&:hover{
+					&:after{
+						background: $gallery_image_overlay_hover;
+					}
+				}
+			}
+		}
+	}
+	.col-md-6 &, .col-md-5 &, .col-md-4 &, .col-md-3 &, .col-md-2 &{
+		padding: $gallery_space_left_and_right;
+		@include component_margin;
+		.row{
+			.col-md-6, .col-sm-6, .col-xs-6{
+				padding: $gallery_space_between_images;
+			}
+		}
+	}
+	/* GALLERY LIGHTBOX */
+	.modal{
+		.modal-dialog{
+			.modal-content{
+				.modal-body{
+					/* GALLERY CAROUSEL COMPONENT */
+					.carousel{
+						.carousel-inner{
+							.item{
+								.carousel-caption{
+									color: $main_colour;
+									h1{
+										font-size: $h1_size;
+										line-height: $h1_line_height;
+									}
+									h2{
+										font-size: $h2_size;
+										line-height: $h2_line_height;
+									}
+									h3{
+										font-size: $h3_size;
+										line-height: $h3_line_height;
+									}
+									h4{
+										font-size: $h4_size;
+										line-height: $h4_line_height;
+									}
+									h5{
+										font-size: $h5_size;
+										line-height: $h5_line_height;
+									}
+									h6{
+										font-size: $h6_size;
+										line-height: $h6_line_height;
+									}
+									p, ul, ol{
+										font-size: $p_ul_ol_size;
+										line-height: $p_ul_ol_line_height;
+									}
+								}
+							}
+						}
+						.carousel-control{
+							i{
+								color: $gallery_carousel_arrow_colour;
+								@include app-transition(all, .4s, ease);
+							}
+							&:hover{
+								i{
+									color: $gallery_carousel_arrow_colour_hover;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

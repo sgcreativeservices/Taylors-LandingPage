@@ -1,0 +1,52 @@
+/* VIDEO COMPONENT */
+.video{
+	@include component_margin;
+	text-align: $video_text_align;
+	h1, h2, h3, h4, h5, h6{
+		font-size: $component_title_size;
+		font-weight: bold;
+	}
+}
+
+/* VIDEO LIGHTBOX */
+.modal-backdrop{
+	background: rgba($modal_background_colour, $modal_background_opacity);
+	opacity: 1 !important;
+}
+
+.modal{
+	.modal-dialog{
+		.modal-content{
+			.modal-header,
+			.modal-body{
+				.close{
+					color: $modal_close_colour;
+					border-color: $modal_close_border_colour;
+					border-radius: $modal_close_border_radius;
+					border-width: $modal_close_border_width;
+					@include app-transition(all, .4s, ease);
+					padding: 4px 8px 3px 8px;
+					&:hover, &:focus, &:active{
+						color: $modal_close_colour_hover;
+						border-color: $modal_close_border_colour_hover;
+					}
+				}
+				.modal-title{
+					color: $modal_title_colour;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

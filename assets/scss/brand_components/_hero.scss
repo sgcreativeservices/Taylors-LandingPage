@@ -1,0 +1,128 @@
+/* HERO COMPONENT */
+.hero{ // BACKGROUND IMAGE GET ADDED TO '.hero' DIV VIA SITECORE
+	.section &{
+		@include component_margin;
+	}
+	height: $hero_height;
+
+	&:after{
+		background: $hero_overlay;
+	}
+	.container{
+		width: $hero_content_fluid_layout;
+	  	@if $hero_content_fluid_layout == 100%{
+	        [class*=col]{
+	            .hero_content{
+	                margin-left: 0;
+	                margin-right: 0;
+	                margin-bottom: 0 !important;
+	            }
+	        }
+	  	} @else if $hero_content_fluid_layout == none{
+	        [class*=col]{
+	            .hero_content{
+	                margin-left: 15px;
+	                margin-right: 15px;
+	            }
+	        }
+	  		&.position_left{
+	  			.row{
+	  				margin-left: 0;
+	  			}
+	  		}
+	  		&.position_right{
+	  			.row{
+	  				margin-right: 0;
+	  			}
+	  		}
+	  	}
+		&.position_left, &.position_right{
+			.row{
+				[class*=col]{
+					background: $hero_content_background;
+				}
+			}
+		}
+		[class*=col]{
+			.hero_content{
+				@include content_text_styles;
+				background: $hero_content_background;
+				padding: $hero_content_padding;
+				margin-bottom: $hero_content_bottom;
+				h1, h2, h3, h4, h5, h6, p, ul, ol, small{
+					color: $hero_text_colour;
+				}
+				.button{
+					a{
+						@include secondary_cta;
+						background: $hero_cta_background_colour;
+						color: $hero_cta_text_colour;
+						border-width: $hero_cta_border_width;
+						border-color: $hero_cta_border_colour;
+						border-radius: $hero_cta_border_radius;
+						&:hover, &:active, &:focus{
+							background: $hero_cta_background_colour_hover;
+							color: $hero_cta_text_colour_hover;
+							border-color: $hero_cta_border_colour_hover;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.hero{
+		max-width: 1600px;
+		margin: 0 auto;
+		min-height: auto;
+		height: auto;
+		background-size: 170%;
+		background-color: rgba($hero_content_background, 1);
+		.image_size_placeholder{
+			background: $hero_overlay;
+			padding: percentage( $hero_height / 939px) 0 0;
+		}
+		.container,
+		.container.position_left,
+		.container.position_right{
+			.row{
+				[class*=col]{
+					.hero_content{
+						background: rgba($hero_content_background, 1);
+						padding: (nth($component_margin, 3) / 1.5);
+					}
+				}
+			}
+		}
+		.container{
+		  	@if $hero_content_fluid_layout == none{
+		  		&.position_left{
+		  			.row{
+		  				margin-left: -15px;
+		  			}
+		  		}
+		  		&.position_right{
+		  			.row{
+		  				margin-right: -15px;
+		  			}
+		  		}
+		  	}
+			[class*=col]{
+				.hero_content{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

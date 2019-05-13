@@ -1,0 +1,207 @@
+/* WIDGET COMPONENT */
+.widget{
+	@include component_margin;
+	background: $widget_background;
+	color: $widget_text_colour;
+	padding: $widget_padding;
+	text-align: $widget_text_align;
+	#{$widget_border_property}: $widget_border;
+	border-radius: $widget_border_radius;
+	h1, h2, h3, h4, h5, h6{
+		font-size: $component_title_size;
+		color: $widget_title_colour;
+		// wrapped in an anchor (clickable title)
+		a{
+			color: $widget_title_colour;
+			&:hover, &:focus, &:active{
+				outline: 0;
+			}
+		}
+	}
+	h1, h2, h3, h4, h5, h6{
+		font-weight: bold;
+	}
+	h1, h2, h3, h4, h5, h6, p{
+		margin: 0 0 (nth($widget_padding, 1) / 2) 0;
+	}
+	img{
+		margin: 0 0 (nth($widget_padding, 1)) 0;
+	}
+	.button{
+		margin: (nth($widget_padding, 1)) 0 0 0;
+		a{
+			@include secondary_cta;
+			background: $widget_cta_background_colour;
+			color: $widget_cta_text_colour;
+			border: $widget_cta_border;
+			border-radius: $widget_cta_border_radius;
+			&:hover, &:active, &:focus{
+				background: $widget_cta_background_colour_hover;
+				color: $widget_cta_text_colour_hover;
+				border-color: $widget_cta_border_colour_hover;
+			}
+		}
+	}
+	// fully clickable widget
+	&.clickable{
+		padding: 0;
+		position: relative;
+		> a{
+			display: block;
+			padding: $widget_padding;
+			color: $widget_text_colour;
+			height: 100%;
+			&:hover, &:focus, &:active{
+				text-decoration: none;
+				outline: 0;
+			}
+		}
+	}
+}
+
+.pullout{
+	@include component_margin;
+	background: $pullout_background;
+	color: $pullout_text_colour;
+	padding: $pullout_padding;
+	text-align: $pullout_text_align;
+	#{$pullout_border_property}: $pullout_border;
+	border-radius: $pullout_border_radius;
+	h1, h2, h3, h4, h5, h6{
+		font-size: $component_title_size;
+		color: $pullout_title_colour;
+		// wrapped in an anchor (clickable title)
+		a{
+			color: $pullout_title_colour;
+			&:hover, &:focus, &:active{
+				outline: 0;
+			}
+		}
+	}
+	h1, h2, h3, h4, h5, h6{
+		font-weight: bold;
+	}
+	h1, h2, h3, h4, h5, h6, p{
+		margin: 0 0 (nth($pullout_padding, 1) / 2) 0;
+	}
+	img{
+		margin: 0 0 (nth($pullout_padding, 1)) 0;
+	}
+	.button{
+		margin: (nth($pullout_padding, 1) / 1.5) 0 0 0;
+		a{
+			@include secondary_cta;
+			background: $pullout_cta_background_colour;
+			color: $pullout_cta_text_colour;
+			border: $pullout_cta_border;
+			border-radius: $pullout_cta_border_radius;
+			&:hover, &:active, &:focus{
+				background: $pullout_cta_background_colour_hover;
+				color: $pullout_cta_text_colour_hover;
+				border-color: $pullout_cta_border_colour_hover;
+			}
+		}
+	}
+	// fully clickable widget
+	&.clickable{
+		padding: 0;
+		position: relative;
+		> a{
+			display: block;
+			padding: $pullout_padding;
+			color: $pullout_text_colour;
+			height: 100%;
+			&:hover, &:focus, &:active{
+				text-decoration: none;
+				outline: 0;
+			}
+		}
+	}
+	&.option2{
+		background: $pullout_background_2;
+		color: $pullout_text_colour_2;
+		text-align: $pullout_text_align_2;
+		#{$pullout_border_property_2}: $pullout_border_2;
+		border-radius: $pullout_border_radius_2;
+		// fully clickable widget
+		&.clickable > a{
+			color: $pullout_text_colour_2;
+		}
+		h1, h2, h3, h4, h5, h6{
+			color: $pullout_title_colour_2;
+		}
+		.button{
+			a{
+				background: $pullout_cta_background_colour_2;
+				color: $pullout_cta_text_colour_2;
+				border: $pullout_cta_border_2;
+				border-radius: $pullout_cta_border_radius_2;
+				&:hover, &:active, &:focus{
+					background: $pullout_cta_background_colour_hover_2;
+					color: $pullout_cta_text_colour_hover_2;
+					border-color: $pullout_cta_border_colour_hover_2;
+				}
+			}
+		}
+	}
+	&.option3{
+		background: $pullout_background_3;
+		color: $pullout_text_colour_3;
+		text-align: $pullout_text_align_3;
+		#{$pullout_border_property_3}: $pullout_border_3;
+		border-radius: $pullout_border_radius_3;
+		// fully clickable widget
+		&.clickable > a{
+			color: $pullout_text_colour_3;
+		}
+		h1, h2, h3, h4, h5, h6{
+			color: $pullout_title_colour_3;
+		}
+		.button{
+			a{
+				background: $pullout_cta_background_colour_3;
+				color: $pullout_cta_text_colour_3;
+				border: $pullout_cta_border_3;
+				border-radius: $pullout_cta_border_radius_3;
+				&:hover, &:active, &:focus{
+					background: $pullout_cta_background_colour_hover_3;
+					color: $pullout_cta_text_colour_hover_3;
+					border-color: $pullout_cta_border_colour_hover_3;
+				}
+			}
+		}
+	}
+}
+
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.widget{
+		@if $widget_padding > 29px{
+			padding: $widget_padding / 1.5;
+		}
+		&.clickable > a{
+			@if $widget_padding > 29px{
+				padding: $widget_padding / 1.5;
+			}
+		}
+	}
+	.pullout{
+		@if $pullout_padding > 29px{
+			padding: $pullout_padding / 1.5;
+		}
+		&.clickable > a{
+			@if $pullout_padding > 29px{
+				padding: $pullout_padding / 1.5;
+			}
+		}		
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

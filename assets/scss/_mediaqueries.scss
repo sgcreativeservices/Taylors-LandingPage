@@ -1,0 +1,14 @@
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	header{
+		padding: (nth($header_padding, 1) / 1.5);
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

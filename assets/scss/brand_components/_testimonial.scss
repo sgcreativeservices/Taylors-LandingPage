@@ -1,0 +1,51 @@
+/* TESTIMONIAL COMPONENT */
+.testimonial{
+	@include component_margin;
+	background: $testimonial_background;
+	padding: $testimonial_padding;
+	text-align: $testimonial_text_align;
+	h1, h2, h3, h4, h5, h6{
+		&:first-child{
+			font-size: $component_title_size;
+			color: $testimonial_text_colour;
+			font-weight: bold;
+		}
+	}
+	img{
+		margin: $testimonial_image_margin;
+	}
+	.testimonial_content{
+		color: $main_colour;
+		font-size: $testimonial_text_size;
+		line-height: $testimonial_text_line_height;
+	}
+	.testimonial_info{
+		@include content_text_styles;
+		p{
+			color: $main_colour;
+		}
+		a, a:hover{
+			color: $red;
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+	.testimonial{
+		.col-md-12 &{
+			text-align: $testimonial_text_align;
+			img{
+				margin: $testimonial_image_margin;
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){
+}

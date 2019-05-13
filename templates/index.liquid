@@ -1,0 +1,156 @@
+{% include "layout/head" %}
+{% comment %} // DO NOT ADD CODE ABOVE THIS LINE // {% endcomment %}
+
+{% include "components/cook ie_bar" %}
+
+{% include "header" %}
+
+{% include "components/hero" %}
+
+<div class="section one">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content_box">
+                    <h1>Test test test test</h1>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <h2>Test test test test</h2>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <h3>Test test test test</h3>
+                    <ul>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid.</li>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid enim eiusmod high life accusamus terry richardson ad squid.</li>
+                    </ul>
+                    <ol>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid.</li>
+                        <li>enim eiusmod high life accusamus terry richardson ad squid enim eiusmod high life accusamus terry richardson ad squid.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout' %}
+                    {% assign clickable_widget = 'no' %}
+                    {% assign title = 'Pullout' %}
+                    {% assign clickable_title = 'no' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.</p> <p>lorem ipsum sed do eiusmod tempor ut labore et dolore magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout option2' %}
+                    {% assign clickable_widget = 'no' %}
+                    {% assign title = 'Pullout option 2' %}
+                    {% assign clickable_title = 'yes' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'pullout option3' %}
+                    {% assign clickable_widget = 'yes' %}
+                    {% assign title = 'Pullout option 3' %}
+                    {% assign clickable_title = 'no' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.</p> <p>lorem ipsum sed do eiusmod tempor ut labore et dolore magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'widget' %}
+                    {% assign clickable_widget = 'no' %}
+                    {% assign title = 'Pullout' %}
+                    {% assign clickable_title = 'no' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.</p> <p>lorem ipsum sed do eiusmod tempor ut labore et dolore magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'widget' %}
+                    {% assign clickable_widget = 'no' %}
+                    {% assign title = 'Pullout option 2' %}
+                    {% assign clickable_title = 'yes' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+            <div class="col-md-4">
+                {% include 'components/widget'%}
+                    {% assign className = 'widget' %}
+                    {% assign clickable_widget = 'yes' %}
+                    {% assign title = 'Pullout option 3' %}
+                    {% assign clickable_title = 'no' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit magna aliqua.</p> <p>lorem ipsum sed do eiusmod tempor ut labore et dolore magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% include "components/carousel" %}
+            </div>
+        </div>        
+    </div> <!-- /container -->
+</div> <!-- /section_one -->
+
+
+<div class="section two">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% include "components/accordion" %}
+                {% include "components/tabs" %}
+            </div>
+            <div class="col-md-6">
+                {% include "components/video" %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% include "components/gallery" %}
+            </div>
+        </div>
+    </div> <!-- /container -->
+</div> <!-- /section_two close -->
+
+
+<div class="section three">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {% include 'components/widget'%}
+                    {% assign className = '' %}
+                    {% assign title = 'Widget' %}
+                    {% assign image_size = '720x400' %}
+                    {% assign content = '<p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>' %}
+                    {% assign button = 'Apply now' %}
+            </div>
+            <div class="col-md-6">
+                {% include "components/testimonial" %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {% include "components/enquiry_form" %}
+                {% include "components/popup_form" %}
+            </div>
+        </div>
+    </div> <!-- /container -->
+</div> <!-- /section_three close -->
+
+
+{% include "footer" %}
+
+
+{% comment %} // DO NOT ADD CODE BELOW THIS LINE // {% endcomment %}
+{% include "layout/foot" %}

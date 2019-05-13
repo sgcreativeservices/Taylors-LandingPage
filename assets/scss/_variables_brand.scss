@@ -1,0 +1,344 @@
+
+// ************************************** COLOURS ************************************** //
+
+$main_colour:            #121529 !default; // Use this for ting like main body text colour
+
+$red:					 #bc2a30 !default;
+$dark_red:				 #7b1316 !default;
+$light_grey:			 #9d9fa1 !default;
+
+// form colours
+$form_colour:            $red !default; // This should be a medium/darker brand colour
+$form_colour_s:          #eee !default; // _s stands for secondary. This should be a lighter brand colour
+
+
+// ************************************** FONTS ************************************** //
+
+// Font path - change to match the font file names
+$font_reg_path:				 			 regular_font_file_name !default;
+$font_bold_path:			 			 bold_font_file_name !default;
+
+
+// ********************************** PAGE SECTIONS ********************************** //
+$section_padding:						 30px 0 0 0 !default;
+$section_one_background_colour:			 #fff !default;
+$section_two_background_colour:			 #eee !default;
+$section_three_background_colour:		 #fff !default;
+
+
+// ************************************* HEADER ************************************* //
+
+$header_background_colour:               none !default;
+$header_padding:						 30px 0 !default; // this gets divided by 1.5 for mobile
+$sticky_header_background_colour:		 #fff !default;
+$sticky_header_shadow:					 0px 0px 12px 0px rgba(0,0,0,0.08) !default;
+
+// ------------- HEADER COMPONENTS ------------- //
+
+// Language select
+$language_select_text_colour:     		 $main_colour !default;
+$language_select_font_size:       		 12px !default;
+
+// Logo
+$logo_margin:                            0 0 0 0 !default;
+$logo_max_width:						 210px !default;
+$logo_max_height:						 none !default;
+
+// ************************************** FOOTER ************************************** //
+
+$footer_background_colour:               #202129 !default;
+$footer_padding:               			 30px 0 !default;
+
+// ------------- FOOTER COMPONENTS ------------- //
+
+// Footer links
+$footer_links_colour:                    $light_grey !default;
+$footer_links_text_decoration:           none !default;
+// Footer links hover
+$footer_links_colour_hover:              #fff !default;
+$footer_links_text_decoration_hover:     underline !default;
+
+// Social media title
+$social_media_title_size:				 14px !default;
+$social_media_title_colour:		         $light_grey !default;
+// Social media icons
+$space_between_icons:					 15px !default;
+$icon_size:								 20px !default;
+$icon_colour:							 #fff !default;
+// Social media icons hover, active, focus
+$icon_colour_hover:						 $light_grey !default;
+$icon_opacity_hover:					 0.8 !default;
+
+// Footer maintained by SG
+$footer_maintained_by_colour:            #fff !default;
+
+
+// ************************************** CTA VARIABLES ************************************** //
+
+// Global CTA padding
+$cta_padding:                   		 10px 15px !default; 
+
+// Primary CTA (last child in button group)
+$cta_primary_background_colour:          $red !default; 
+$cta_primary_text_colour:                #fff !default;
+$cta_primary_border_width:               0 !default;
+$cta_primary_border_colour:              $red !default;
+$cta_primary_border_radius:              0 !default;
+// Primary CTA hover, active, focus
+$cta_primary_background_colour_hover:    $dark_red !default;
+$cta_primary_text_colour_hover:          #fff !default;
+$cta_primary_border_colour_hover:        $dark_red !default;
+
+// Secondary CTA (widget & form buttons)
+$cta_secondary_background_colour:        none !default; 
+$cta_secondary_text_colour:				 $red !default;
+$cta_secondary_border_width:			 0 !default;
+$cta_secondary_border_colour:			 $red !default;
+$cta_secondary_border_radius:			 0 !default;
+// Secondary CTA hover, active, focus
+$cta_secondary_background_colour_hover:	 $red !default;
+$cta_secondary_text_colour_hover:		 #fff !default;
+$cta_secondary_border_colour_hover:		 $red !default;
+
+// ************************************** MAIN COMPONENTS ************************************** //
+
+// Content box / Accordion content / tab content
+$h1_size:										26px !default;
+$h1_line_height:								30px !default;
+$h1_colour:										$red !default;
+
+$h2_size:										24px !default;
+$h2_line_height:								28px !default;
+$h2_colour:										$red !default;
+
+$h3_size:										22px !default;
+$h3_line_height:								26px !default;
+$h3_colour:										$red !default;
+
+$h4_size:										18px !default;
+$h4_line_height:								28px !default;
+$h4_colour:										$main_colour !default;
+
+$h5_size:										14px !default;
+$h5_line_height:								24px !default;
+$h5_colour:										$main_colour !default;
+
+$h6_size:										12px !default;
+$h6_line_height:								22px !default;
+$h6_colour:										$main_colour !default;
+
+$p_ul_ol_size:									14px !default;
+$p_ul_ol_line_height:							24px !default;
+$p_ul_ol_colour:								$main_colour !default;
+
+$a_colour:										$red !default;
+$a_text_decoration:								none !default;
+$a_colour_hover:								$red !default;
+$a_text_decoration_hover:						underline !default;
+
+// Accordion
+$accordion_title_text_align:					auto !default;
+$accordion_text_colour:							#fff !default;
+$accordion_text_and_icon_size:					20px !default;
+$accordion_icon_colour:							$accordion_text_colour !default;
+$accordion_background_colour:					$red !default;
+$accordion_padding:								10px 40px 10px 10px !default;
+$accordion_border_direction:					border !default;
+$accordion_border_radius:						0 0 0 0 !default;
+$accordion_border_width:						0 !default;
+$accordion_border_colour:						$red !default;
+// Accordion open
+$accordion_background_colour_open:				$dark_red !default;
+$accordion_text_colour_open:					#fff !default; 
+$accordion_icon_colour_open:					$accordion_text_colour_open !default; 
+// Accordion content
+$accordion_content_background:					#fff !default;
+$accordion_content_padding:						15px 15px 10px 15px !default;
+
+// Carousel
+$carousel_caption_background_colour:     		rgba(black, 0.4) !default;
+$carousel_caption_background_colour_mobile:		rgba($carousel_caption_background_colour, 1) !default;
+$carousel_text_size:                     		20px !default;
+$carousel_text_colour:                   		#fff !default;
+// Carousel indicators
+$carousel_indicators_colour:             		#fff !default;
+$carousel_indicators_border_width:       		2px !default;
+$carousel_indicators_border_colour:      		#fff !default;
+// Carousel indicators active
+$carousel_indicators_colour_active:      		$red !default;
+$carousel_indicators_border_colour_active:      $red !default;
+
+// Form
+
+// Gallery
+$gallery_space_between_images:					5px !default;
+$gallery_space_left_and_right:					10px !default;
+$gallery_icon_colour:							#fff !default;
+$gallery_image_overlay:							rgba(0, 0, 0, 0.4) !default;
+$gallery_image_overlay_hover:					rgba(0, 0, 0, 0.2) !default;
+$gallery_carousel_arrow_colour:					$a_colour !default;
+$gallery_carousel_arrow_colour_hover:			$a_colour_hover !default;
+
+// Hero image
+$hero_height:									450px !default; // the background image height must match this value
+$hero_overlay:									rgba(0, 0, 0, 0) !default;
+$hero_content_fluid_layout:						none !default; // accepts '100%' or 'none'
+$hero_content_background:						rgba(0, 0, 0, 0.4) !default;
+$hero_content_padding:							15px !default;
+$hero_content_bottom:							30px !default; // center aligned content only
+$hero_text_colour:								#fff !default;
+// Hero cta - by default has the secondary cta styles, but they can be overridden with these variables
+$hero_cta_background_colour:					$red !default; 
+$hero_cta_text_colour:							#fff !default;
+$hero_cta_border_width:							0 !default;
+$hero_cta_border_colour:						#fff !default;
+$hero_cta_border_radius:						auto !default;
+// Hero CTA hover, active, focus
+$hero_cta_background_colour_hover:				$dark_red !default;
+$hero_cta_text_colour_hover:					#fff !default;
+$hero_cta_border_colour_hover:					#fff !default;
+
+// Map
+$map_background:								#fff !default;
+$map_padding:									10px !default;
+$map_text_align:								center !default;
+
+// Tabs 
+$tab_border_top_width:							2px !default;
+$tab_border_top_colour:							$red !default;
+$tab_border_bottom_width:						0px !default;
+$tab_border_bottom_colour:						$red !default;
+// Tabs nav
+$tab_nav_padding:								10px 15px 8px 15px !default;
+$tab_nav_background:							none !default;
+$tab_nav_text_colour:							$main_colour !default;
+$tab_nav_font_size:								20px !default;
+// Tabs nav hover, active, focus
+$tab_nav_text_decoration:						underline !default;
+$tab_nav_text_colour_hover:						$red !default;
+// Tabs nav active state
+$tab_nav_background_active:						$red !default;
+$tab_nav_text_colour_active:					#fff !default;
+// Tab content
+$tab_content_background:						#fff !default;
+$tab_content_padding:							20px 15px 10px 15px !default;
+
+// Testimonial
+$testimonial_image_margin:						0 0 20px 0 !default;
+$testimonial_background:						#eee !default;
+$testimonial_padding:							20px !default;
+$testimonial_text_align:						accordion_text_colour_open !default;
+$testimonial_text_colour:						$red !default;
+$testimonial_text_size:							20px !default;
+$testimonial_text_line_height:					30px !default;
+
+// Video
+$video_text_align:								auto !default;
+
+// Widget
+$widget_background:								#eee !default;
+$widget_padding:								20px !default;
+$widget_text_align:								auto !default;
+$widget_title_colour:							$red !default;
+$widget_text_colour:							$main_colour !default;
+$widget_border_property:						border !default;
+$widget_border:									0px solid #ddd !default;
+$widget_border_radius:							0px !default;
+// Pullout widget CTA
+$widget_cta_background_colour:					$red !default; 
+$widget_cta_text_colour:						#fff !default;
+$widget_cta_border:								0 !default;
+$widget_cta_border_radius:						auto !default;
+// Pullout widget CTA hover, active, focus
+$widget_cta_background_colour_hover:			$dark_red !default;
+$widget_cta_text_colour_hover:					#fff !default;
+$widget_cta_border_colour_hover:				$dark_red !default;
+
+// Pullout widget
+$pullout_background:							$main_colour !default;
+$pullout_title_colour:							#fff !default;
+$pullout_text_colour:							#fff !default;
+$pullout_padding:								20px !default;
+$pullout_text_align:							auto !default;
+$pullout_border_property:						border !default;
+$pullout_border:								0 !default;
+$pullout_border_radius:							0 !default;
+// Pullout widget CTA
+$pullout_cta_background_colour:					$pullout_title_colour !default; 
+$pullout_cta_text_colour:						$main_colour !default;
+$pullout_cta_border:							0 !default;
+$pullout_cta_border_radius:						auto !default;
+// Pullout widget CTA hover, active, focus
+$pullout_cta_background_colour_hover:			$pullout_title_colour !default;
+$pullout_cta_text_colour_hover:					$red !default;
+$pullout_cta_border_colour_hover:				$pullout_title_colour !default;
+
+// ------------- Pullout option 2 ------------- //
+$pullout_background_2:							$red !default;
+$pullout_title_colour_2:						$pullout_title_colour !default;
+$pullout_text_colour_2:							$pullout_text_colour !default;
+$pullout_text_align_2:							$pullout_text_align !default;
+$pullout_border_property_2:						$pullout_border_property !default;
+$pullout_border_2:								$pullout_border !default;
+$pullout_border_radius_2:						$pullout_border_radius !default;
+// Pullout widget option 2 CTA
+$pullout_cta_background_colour_2:				auto !default; 
+$pullout_cta_text_colour_2:						auto !default;
+$pullout_cta_border_2:							2px solid auto !default;
+$pullout_cta_border_radius_2:					auto !default;
+// Pullout widget option 2 CTA hover, active, focus
+$pullout_cta_background_colour_hover_2:			auto !default;
+$pullout_cta_text_colour_hover_2:				auto !default;
+$pullout_cta_border_colour_hover_2:				auto !default;
+
+// ------------- Pullout option 3 ------------- //
+$pullout_background_3:							$dark_red !default;
+$pullout_title_colour_3:						$pullout_title_colour !default;
+$pullout_text_colour_3:							$pullout_text_colour !default;
+$pullout_text_align_3:							$pullout_text_align !default;
+$pullout_border_property_3:						$pullout_border_property !default;
+$pullout_border_3:								$pullout_border !default;
+$pullout_border_radius_3:						$pullout_border_radius !default;
+// Pullout widget option 3 CTA
+$pullout_cta_background_colour_3:				auto !default; 
+$pullout_cta_text_colour_3:						auto !default;
+$pullout_cta_border_3:							2px solid auto !default;
+$pullout_cta_border_radius_3:					auto !default;
+// Pullout widget option 3 CTA hover, active, focus
+$pullout_cta_background_colour_hover_3:			auto !default;
+$pullout_cta_text_colour_hover_3:				auto !default;
+$pullout_cta_border_colour_hover_3:				auto !default;
+
+
+// ************************************** COMPONENT SHARED STYLES ************************************** //
+
+// Component margin
+$component_margin:								0 0 30px 0 !default;
+$component_title_size:							22px !default;
+
+// Modal (video, form & Gallery)
+// Background
+$modal_background_colour:						#fff !default;
+$modal_background_opacity:						0.8 !default;
+// Title
+$modal_title_colour:							$main_colour !default;
+// Close button
+$modal_close_colour:							$a_colour !default;
+$modal_close_border_colour:						$a_colour !default;
+$modal_close_border_radius:						20px !default;
+$modal_close_border_width:						2px !default;
+// Close button hover, active, focus
+$modal_close_colour_hover:						$a_colour_hover !default;
+$modal_close_border_colour_hover:				$a_colour_hover !default;
+
+
+
+
+
+
+
+
+
+
+
+

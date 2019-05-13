@@ -1,0 +1,51 @@
+/* TABS WIDGET COMPONENT */
+.tab_wrapper{
+	@include component_margin;
+	.nav-tabs{ // UL
+		border-bottom: $tab_border_top_width solid $tab_border_top_colour;
+		li{
+			h1, h2, h3, h4, h5, h6, p{
+				a{
+					padding: $tab_nav_padding;
+					background: $tab_nav_background;
+					color: $tab_nav_text_colour;
+					font-size: $tab_nav_font_size;
+					font-weight: bold;
+					&:hover, &:active, &:focus{
+						text-decoration: $tab_nav_text_decoration;
+						color: $tab_nav_text_colour_hover;
+					}
+				}
+			}
+			&.active{
+				h1, h2, h3, h4, h5, h6, p{
+					a{
+						background: $tab_nav_background_active;
+						color: $tab_nav_text_colour_active;
+					}
+				}				
+			}
+		}
+	}
+	.tab-content{
+		.tab-pane{
+			padding: $tab_content_padding;
+			border-bottom: $tab_border_bottom_width solid $tab_border_bottom_colour;
+			background: $tab_content_background;
+			@include content_text_styles;
+		}
+	}
+}
+
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

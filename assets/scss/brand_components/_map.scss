@@ -1,0 +1,23 @@
+/* MAP COMPONENT */
+.map{
+	@include component_margin;
+	background: $map_background;
+	padding: $map_padding;
+	text-align: $map_text_align;
+	h1, h2, h3, h4, h5, h6{
+		font-size: $component_title_size;
+	}
+}
+
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}

@@ -1,0 +1,38 @@
+/* SOCIAL MEDIA COMPONENT */
+.social_media_wrapper{
+	h1, h2, h3, h4, h5, h6, p{
+		font-size: $social_media_title_size;
+		color: $social_media_title_colour;
+	}
+	.social_media{ //UL
+		li{
+			margin-right: $space_between_icons;
+			a{
+				font-size: $icon_size;
+				color: $icon_colour;
+				@include app-transition(all, .4s, ease);
+				&:hover, &:active, &:focus{
+					color: $icon_colour_hover;
+					opacity: $icon_opacity_hover;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){}
+
+@media (max-width: $screen-md-max){}
+
+@media (max-width: $screen-sm-max){
+	.social_media_wrapper{
+		@include component_margin;
+		.social_media{ //UL
+			li{
+				margin: 0 ($space_between_icons / 2);
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-xs-max){}

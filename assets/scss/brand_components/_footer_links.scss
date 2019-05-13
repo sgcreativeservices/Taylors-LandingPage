@@ -1,0 +1,26 @@
+/* FOOTER LINKS */
+.footer_links{ //ul
+	@include component_margin;
+	li{
+		a{
+			color: $footer_links_colour;
+			text-decoration: $footer_links_text_decoration;
+			&:hover, &:active, &:focus{
+				color: $footer_links_colour_hover;
+				text-decoration: $footer_links_text_decoration_hover;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min){
+}
+
+@media (max-width: $screen-md-max){
+}
+
+@media (max-width: $screen-sm-max){
+}
+
+@media (max-width: $screen-xs-max){
+}
